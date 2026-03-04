@@ -2,9 +2,20 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/reset.css'
 import App from './App.jsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import ComingSoon from './pages/CommingSoonPage.jsx'
+import NotFoundPage from './pages/NotFoundPage.jsx'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <ComingSoon />,
+    errorElement: <NotFoundPage />
+  }  
+])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
