@@ -19,6 +19,8 @@
 ## Estrutura das pastas
 ```
 ├── .github/
+│   ├── CODEOWNERS
+│   ├── ISSUE_TEMPLATE.md
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── public/
 │   └── vite.svg
@@ -31,11 +33,12 @@
 │   ├── components/
 │   │   ├── Button
 │   │   │   ├── Button.jsx
-│   │   │   └── ButtonStyles.jsx
+│   │   │   └── ButtonS.jsx
 │   │   └── Fragment.jsx
 │   ├── pages/
 │   │   ├── CommingSoonPage.jsx
-│   │   └── NotFoundPage.jsx
+│   │   ├── NotFoundPage.jsx
+│   │   └── ExamplePage.jsx
 │   ├── styles/
 │   │   └── GlobalStyle.jsx
 │   ├── App.jsx
@@ -86,48 +89,54 @@
     }
   ```
 
-### Componentes react (componentes, páginas e estilos)
+### Componentes react (componentes, estilos e páginas)
 - PascalCase.
-- Tanto as pastas quanto o nome da função do componente devem seguir este padrão para serem diferenciados de funções normais.
+- Tanto as pastas quanto o arquivo e nome da função do componente deve seguir este padrão para serem diferenciados de funções normais.
+- Utilizando as depêndencias react router e styled components páginas e estilos são considerados componentes e por isso devem seguir o mesmo padrão de nomeação.
 - Exemplos:
 
+#### Componente
   ```
-  <!-- Estrutura das pastas -->
     └─── src/
         └── components
-            └── Header <- Pasta com H maiúsculo
-                ├── index.jsx
-                └── style.css 
+            └── Button <- Pasta com B maiúsculo
+                ├── Button.jsx
+                └── ButtonS.js 
   ```
 
   ```jsx
-  <!-- Dentro de index.jsx -->
-    export default function Header() {
-
+  <!-- Dentro de Button.jsx -->
+    export default function Button() {
+      return (
+        ...
+      )
     }
   ```
 
-### Páginas
-- PascalCase
-- Páginas no react são consideras componentes e devem seguir a mesma nomeação e com o prefix **page** no final.
-- Examplos:
+#### Estilo
+- Mesma nomeação com o prefixo **S** no final.
+```js
+// Dentro de ButtonS.js
+export const StyledButton = styled.button`
+  ...
+`
+```
+
+#### Página
+- Mesma nomeação com o prefixo **Page** no final.
   ```
-    <!-- Estrutura das pastas -->
     └─── src/
         └── pages
             └── ComingSoonPage.jsx
   ```
-
   ```jsx
   <!-- Dentro de CommingSoonPage.jsx -->
     export default function CommingSoonPage() {
-
+      return (
+        ...
+      )
     }
   ```
-
-### Estilos
-- PascalCase
-- Estilos também serão feitos em javascript e portanto considerados componentes, devido ao uso da dependência **styled components**.
 
 ## Requisitos
 <!-- Preencha os requisitos funcionais e não funcionais apenas do seu grupo -->
