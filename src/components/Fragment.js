@@ -4,6 +4,7 @@ const Fragment = styled.body`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     width: 100dvw;
     height: 100vh;
