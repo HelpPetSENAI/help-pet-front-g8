@@ -1,5 +1,7 @@
+// Importando a função styled da biblioteca
 import styled from "styled-components"
 
+// Chamando a função styled e utilizando . para definir qual tag do html irá receber o estilo
 export const StyledButton = styled.button`
     cursor: pointer;
     display: flex;
@@ -11,6 +13,7 @@ export const StyledButton = styled.button`
     border-radius: 1rem;
     background-color: var(--clr-green-500);
     
+    /* & para utilizar pseudoclasses no botão */
     &:hover {
         background-color: var(--clr-green-400);
         transform: translateY(-5px);

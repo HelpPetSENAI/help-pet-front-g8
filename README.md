@@ -11,9 +11,9 @@
   - Uma IDE de sua preferência.
 
 ## Como rodar o projeto
-1. Clone este repositório. 
+1. Clone este repositório.
 2. Abra o terminal dentro da pasta.
-3. instale as depêndencias do projeto com o comando `` npm install ``.
+3. instale as depêndencias do projeto com o comando `` npm i ``.
 4. Inicie o projeto com o comando `` npm run dev `` para rodar localmente.
 
 ## Estrutura das pastas
@@ -29,7 +29,7 @@
 │   │   ├── icons/
 │   │   │   └── .gitkeep
 │   │   └── images/
-│   │       └── .gitkeep
+│   │       └── brick-wall.png
 │   ├── components/
 │   │   ├── Button
 │   │   │   ├── Button.jsx
@@ -114,7 +114,7 @@
   ```
 
 #### Estilo
-- Mesma nomeação com o prefixo **S** no final.
+- Mesma nomeação com o prefixo **Style** no final.
 ```js
 // Dentro de ButtonS.js
 export const StyledButton = styled.button`
