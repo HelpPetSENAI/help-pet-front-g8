@@ -10,9 +10,93 @@
   - git - para o versionamento do código.
   - Uma IDE de sua preferência.
 
+## Instalando o node
+> Este comando abaixo funciona tanto no **terminal do linux** quanto no **git bash no windows**.
+
+```bash
+# Baixar e instalar o nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# Carregar o nvm sem precisar reiniciar o terminal
+\. "$HOME/.nvm/nvm.sh"
+
+# Baixar e instalar o Node.js:
+nvm install 24
+
+# Verifique a versão do Node.js:
+node -v # Deve exibir "v24.14.0".
+
+# Verificar a versão do npm:
+npm -v # Deve imprimir "11.9.0".
+```
+
+## Observação!!!
+> realize estes passos no caso da instalação normal do node não estiver funcionando corretamente 
+
+### Configuração do Ambiente para Rodar a Aplicação
+
+Este guia explica como garantir que você está usando a versão correta do **Node.js (v24)** e como rodar a aplicação com Vite.
+
+---
+
+0. Entrar no diretório da aplicação
+```bash
+cd ~/Documentos/help-pet-front-(nome do seu grupo)
+```
+
+1. Verificar qual Node está ativo
+```bash
+node -v
+which node
+```
+
+- O primeiro comando mostra a versão atual do Node.
+- O segundo mostra o caminho do binário que está sendo usado (geralmente `/usr/bin/node`).
+
+2. Instalar Node 24 com NVM (recomendado)
+
+Se você não tem o **nvm** instalado:
+```bash
+curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc
+```
+
+Depois instale e use o Node 24:
+```bash
+nvm install 24
+nvm use 24
+nvm alias default 24   # torna o 24 padrão
+```
+
+3. Confirmar versão
+```bash
+node -v
+```
+
+Agora deve aparecer algo como:
+```
+v24.x.x
+```
+
+4. Reinstalar dependências
+Dentro do diretório da aplicação:
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+---
+
+### Verificação se o node está instalado corretamente
+> Caso algum pacote não seja compatível com Node 24, você pode instalar também o **Node 20 (LTS)** via nvm e alternar entre versões facilmente:
+```bash
+nvm install 20
+nvm use 20
+```
+
 ## Como rodar o projeto
 1. Clone este repositório.
-2. Abra o terminal dentro da pasta.
+2. Abra o terminal dentro da pasta do projeto do seu grupo.
 3. instale as depêndencias do projeto com o comando `` npm i ``.
 4. Inicie o projeto com o comando `` npm run dev `` para rodar localmente.
 
