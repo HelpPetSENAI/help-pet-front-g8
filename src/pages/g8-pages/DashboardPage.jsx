@@ -1,8 +1,11 @@
-import { DashboardStyle } from "./DashboardGridStyle";
+import DashBoardCards from "../../components/DashboardCards";
+import { DashboardSectionStyle } from "./DashboardSectionStyle";
 
 
 export default function Dashboard(){
     return (
-        <DashboardStyle />
+        <DashboardSectionStyle >
+            <DashBoardCards />
+        </DashboardSectionStyle>
     )
 }
