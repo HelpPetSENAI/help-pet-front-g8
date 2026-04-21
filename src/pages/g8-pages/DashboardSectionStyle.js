@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const DashboardStyle = styled.section`
+export const DashboardSectionStyle = styled.section`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
