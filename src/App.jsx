@@ -5,6 +5,7 @@ import NotFoundPage from './pages/NotFoundPage.jsx'
 import ExamplePage from './pages/ExamplePage.jsx'
 import Dashboard from './pages/page-g8/DashboardPage.jsx'
 import MessagePageG6 from './pages/page-g6/MessagePageG6.jsx'
+import ProtectedRoutes from './utils/ProtectedRoutes.jsx'
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,13 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard />
+    element: <ProtectedRoutes />,
+    children: [
+      {
+        index: true, 
+        element: <Dashboard />,
+      },
+    ]
   },
   {
     path: '/message',
